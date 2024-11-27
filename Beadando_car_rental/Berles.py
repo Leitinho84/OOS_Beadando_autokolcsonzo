@@ -1,14 +1,14 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 
-class Berles:
+class Rental:
     def __init__(self, rented_number_plate, date):
         self._rented_number_plate = rented_number_plate
         self._date = date
 
-    @abstractmethod
-    def rent_car(self):
-        pass
+    @property
+    def rented_number_plate(self):
+        return self._rented_number_plate
 
-    @abstractmethod
-    def unrent_car(self):
-        pass
+    @property
+    def date(self):
+        return self._date
