@@ -1,14 +1,11 @@
 from abc import ABC
+from Auto import Auto
 
-class Rental:
-    def __init__(self, rented_number_plate, date):
-        self._rented_number_plate = rented_number_plate
-        self._date = date
+class Berles:
+    def __init__(self, number_plate, date, price):
+        self.number_plate = number_plate
+        self.date = date
+        self.price = price
 
-    @property
-    def rented_number_plate(self):
-        return self._rented_number_plate
-
-    @property
-    def date(self):
-        return self._date
+    def __str__(self):
+        return f"Rendszám: {self.number_plate}, Dátum: {self.date}, Ár: {self.price} Ft"

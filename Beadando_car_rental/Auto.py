@@ -1,16 +1,22 @@
 from abc import ABC, abstractmethod
 
-class Car(ABC):
+class Auto(ABC):
     def __init__(self, number_plate, model, price):
         self._number_plate = number_plate
         self._model = model
         self._price = price
-        self._is_rented = False
 
+    @property
     @abstractmethod
-    def rent_car(self):
+    def number_plate(self):
         pass
 
+    @property
     @abstractmethod
-    def unrent_car(self):
+    def model(self):
+        pass
+
+    @property
+    @abstractmethod
+    def price(self):
         pass
